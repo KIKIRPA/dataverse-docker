@@ -196,6 +196,7 @@ services:
         - postgres
         - solr
       volumes:
+        # - ./privkey.bin:/privkey.bin
         - ./secrets:/secrets
         - ./data:/data
         - ./docroot:/opt/docroot
