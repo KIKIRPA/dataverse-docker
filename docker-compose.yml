@@ -141,6 +141,8 @@ services:
         - "doi_handle_handleauthhandle"
         - "doi_handle_admcredfile"
         - "doi_handle_index"
+        - "fqdn"
+        - "siteurl"
         - "dataciterestapiurlstring"
         - "baseurlstring"
         - "aws_bucket_name"
