@@ -12,8 +12,8 @@ curl -X PUT -d 'native/http' $SERVER/admin/settings/:UploadMethods
 curl -X PUT -d solr:8983 "$SERVER/admin/settings/:SolrHostColonPort"
 echo
 
-# Demo server with FAKE DOIs if doi_authority is empty
-if [ -z "${doi_authority}" ]; then
+# Demo server with FAKE DOIs if doi_authority and handle_authority are both empty
+if [ -z "${doi_authority}" ] && [ -z "${handle_authority}" ]; then
     curl -X PUT -d doi "$SERVER/admin/settings/:Protocol"
     curl -X PUT -d 10.5072 "$SERVER/admin/settings/:Authority"
     curl -X PUT -d "FK2/" "$SERVER/admin/settings/:Shoulder"
