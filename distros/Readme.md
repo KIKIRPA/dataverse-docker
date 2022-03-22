@@ -16,3 +16,4 @@ Available distributions (more is coming):
 * BeFAIR (with FAIR assessment)
 * docker-compose-ssl.yml (standard with letsencrypt https) 
 * docker-compose-shibboleth.yml (Shibboleth support included)
+* docker-compose-kikirpa.yml (Dataverse for KIK-IRPA, with Handle configured)
