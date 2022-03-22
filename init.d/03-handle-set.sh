@@ -21,4 +21,7 @@ if [ "${handle_authority}" ]; then
     if [ "${handle_index}" ]; then
         asadmin --user=${ADMIN_USER} --passwordfile=${PASSWORD_FILE} create-jvm-options "-Ddataverse.handlenet.index\=${handle_index}"
     fi
+    if [ "${dataverse_siteurl}" ]; then
+        asadmin --user=${ADMIN_USER} --passwordfile=${PASSWORD_FILE} create-jvm-options "-Ddataverse.siteUrl\=${dataverse_siteurl}"
+    fi
 fi

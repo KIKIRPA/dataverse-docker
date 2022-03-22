@@ -46,6 +46,7 @@ services:
         - "WEBHOOK"
         - "CESSDA"
         - "CLARIN"
+        - "dataverse_siteurl"
         - "doi_authority"
         - "doi_provider"
         - "doi_username"
