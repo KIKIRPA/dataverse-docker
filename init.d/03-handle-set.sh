@@ -10,7 +10,7 @@ if [ "${handle_authority}" ]; then
     asadmin --user=${ADMIN_USER} --passwordfile=${PASSWORD_FILE} create-jvm-options "-Ddataverse.handlenet.admcredfile\=${handle_admcredfile}"
     
     if [ "${handle_authhandle}" ]; then
-        curl -X PUT -d "${handle_authhandle}/" http://localhost:8080/api/admin/settings/:HandleAuthHandle
+        curl -X PUT -d "${handle_authhandle}" http://localhost:8080/api/admin/settings/:HandleAuthHandle
     fi
     if [ "${handle_shoulder}" ]; then
         curl -X PUT -d "${handle_shoulder}/" http://localhost:8080/api/admin/settings/:Shoulder
