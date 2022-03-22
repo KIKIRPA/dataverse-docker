@@ -1,5 +1,5 @@
 # "Archive in a box" package for Dataverse
-This distributive is intented for the research organizations and universities which want to run Community based Data Repository to make their data FAIR (Findable, Accessible, Interoperable and Reusable). The idea of having "Archive in a box" is simple: it should be doing an automatic installation and setting up the complete infrastructure without extra efforts and by institutions having limited technical resources. You can easily turn this demonstration service with default FAKE persistent identifiers into completely operational data archive with production DOIs, mail relay and automatically connected external storages. 
+This distributive is intented for the research organizations and universities which want to run Community based Data Repository to make their data FAIR (Findable, Accessible, Interoperable and Reusable). The idea of having "Archive in a box" is simple: it should be doing an automatic installation and setting up the complete infrastructure without extra efforts and by institutions having limited technical resources. You can easily turn this demonstration service with default FAKE persistent identifiers into completely operational data archive with production DOIs/Handles, mail relay and automatically connected external storages. 
 
 ## Dataverse Docker module
 Dataverse Docker module was developed by [DANS-KNAW](http://dans.knaw.nl) (Data Archiving and Networked Services, the Netherlands) to run [Dataverse](http://github.com/IQSS/dataverse) data repository on Kubernetes and other Cloud services supporting Docker.
@@ -18,7 +18,7 @@ This software package relies on container technologies like Docker and Kubernete
 ### Demo version and development/production service
 The demonstration version of Dataverse (“Proof of Concept”) is available out of the box after completing the installation on the local computer or Virtual Machine. It will be shipped with FAKE persistent identifiers, language switch and various content previewers, and other components integrated in the infrastructure. This default installation could be done by people without technical background and allows extensive testing of the basic functionality without spending any time on the system administration tasks related to the Dataverse setup. 
 
-To run their Dataverse as a completely operational production service, data providers  should fill all settings in the [configuration file](https://github.com/IQSS/dataverse-docker/blob/master/.env) containing information about their domain name, DOIs settings, the language of web interface, mail relay, external controlled vocabularies and storage. There is also possibility to integrate Docker based custom services in the infrastructure and create own software packages serving the needs of the specific data providers, for example, to integrate a separate Shibboleth container for the federated authentication, install new data previewer or activate data processing pipeline.
+To run their Dataverse as a completely operational production service, data providers  should fill all settings in the [configuration file](https://github.com/IQSS/dataverse-docker/blob/master/.env) containing information about their domain name, DOI or Handle.net settings, the language of web interface, mail relay, external controlled vocabularies and storage. There is also possibility to integrate Docker based custom services in the infrastructure and create own software packages serving the needs of the specific data providers, for example, to integrate a separate Shibboleth container for the federated authentication, install new data previewer or activate data processing pipeline.
 
 ### Configuration
 The configuration is managed in the central place in an environmental variables file called [.env](https://github.com/IQSS/dataverse-docker/blob/master/.env), so administrators have no need to modify other files in the software package. It contains all necessary settings required to deploy Dataverse, for example, to set the language or web interface, establish connection to the local database, SOLR search engine, mail relay or external storage. 
@@ -63,7 +63,7 @@ git clone https://github.com/IQSS/dataverse-docker
 ```
 cp .env_sample .env
 ```
-You can edit .env file and add your configuration for DOI service, mailrelay, S3 connections, etc.
+You can edit .env file and add your configuration for DOI/Handle.net service, mailrelay, S3 connections, etc.
 
 # Dataverse distributions
 You can use different Dataverse distributions, or distros, and add any Dockerized components depending from your use case. To switch to another distro you should change the variable COMPOSE_FILE in your .env file to the yaml file below.
